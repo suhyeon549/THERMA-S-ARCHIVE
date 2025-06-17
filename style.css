@@ -1,0 +1,2365 @@
+/*===============RESET===============*/
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box ;
+    
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+    
+ul {
+    list-style: none;
+}
+
+
+#wrap {
+    width:100%;
+    background-color: black;
+    overflow-x: hidden;
+    
+}
+
+/*=====헤더=====*/
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 48px 70px;
+  background: rgba(0, 0, 0);
+  z-index: 10;
+  position: fixed;
+}
+
+header ul {
+  display: flex;       
+  flex-direction: row;  
+  margin-left: auto;     
+}
+
+header li {
+  color: white;
+  font-size: 20px;
+  margin-left: 70px;
+  transition: color 0.3s ease;
+  list-style: none;
+  font-weight: 100;
+  margin-top: 18px;
+  font-family: "Trispace", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+  color: white;          
+  display: flex;
+}
+
+
+header {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.5s ease;
+}
+
+header.scrolled {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0));
+  transition: background-color 0.5s ease;
+}
+
+
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  line-height: 0.8;
+  margin-top: 10px;
+   text-decoration: none;
+}
+
+.logo-main {
+  font-family: "Trispace", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-sub {
+  font-family: "Trispace", sans-serif;
+  font-size: 18px;
+  font-weight: 350;
+}
+
+
+header li a {
+  position: relative;
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+
+header li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #aaa;
+  transition: width 0.3s ease;
+}
+
+header li a:hover {
+  color: #aaa;
+  letter-spacing: 1.2px;
+}
+
+
+header li a:hover::after {
+  width: 100%;
+}
+
+
+.logo {
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #aaa;
+}
+
+.logo:hover .logo-main,
+.logo:hover .logo-sub {
+  color: #aaa;
+}
+
+  .navBar {
+    position: relative;
+    height: 10px;
+    width: 2px;
+    background-color: #ffffff;
+  }
+
+
+  .section1_wrapper {
+    background-color: #000000;
+    flex-direction: column;
+    
+  }
+
+  .background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 화면에 꽉 차게, 비율 유지 */
+  pointer-events: none; /* 영상 클릭 방지 (선택) */
+  overflow: hidden;
+}
+
+
+/* section2 */
+
+.section2_wrapper {
+    background-color: #000000;
+    flex-direction: column;
+    display: flex;
+    
+  }
+
+.section2_background-IMG {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('IMG/section2_IMG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  /* overflow: hidden; */
+  padding: 0 10vw;
+}
+
+
+
+
+.noto-sans-kr-uniquifier {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
+
+
+
+.section2_texts {
+  align-items: center;
+  padding-top: 20vh;
+  font-family: "Noto Sans KR", sans-serif;
+  height: auto; 
+ 
+}
+
+.section2_title {
+  font-family: "Trispace", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 2vw;
+  
+}
+
+.section2_subtitle {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2.3vw;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 2.3vw;
+}
+
+.section2_text {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.2vw;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+    white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* 애니메이션 추가 */
+
+/* 기본 상태: 숨김 */
+.section2_title,
+.section2_subtitle,
+.section2_text {
+  opacity: 0;
+  transform: translateY(20px); /* 약간 아래서 올라오는 효과 */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 활성화되면 보여짐 */
+.section2_texts.visible .section2_title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.section2_texts.visible .section2_subtitle {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.section2_texts.visible .section2_text {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+
+
+/* section3 */
+
+.section3_wrapper {
+    background-color: #000000;
+    flex-direction: column;
+    display: flex;
+    padding: 5vh 5vw;
+    min-height: 100vh;
+    
+    
+  }
+
+
+
+.section3_texts {
+  align-items: center;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  height: auto; 
+  padding-bottom: 30vh;
+  z-index: 2;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.section3_section_name {
+  font-family: "Trispace", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: center;
+  padding-top: 20vh;
+
+}
+
+ .section3_title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: left;
+  padding-top: 10vh;
+  padding-bottom: 3vh;
+  
+}
+
+
+.section3_text {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: left;
+  font-weight: 300;
+    white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.section3_texts_right {
+  align-items: center;
+  padding-top: 5vh;
+  padding-bottom: 3vh;
+  height: auto; 
+  position: relative;
+   font-family: "Noto Sans KR", sans-serif;
+}
+
+
+ .section3_title_right {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: right;
+  padding-top: 10vh;
+  padding-bottom: 1vh;
+  z-index: 3;
+  position: relative;
+}
+
+.cards {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 37px;
+    padding: 2vh 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 3;
+  position: relative;
+}
+
+.card {
+  width: 22vw;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2vw 3vh;
+  border-radius: 2vw;
+  border: 2px solid #fff;
+  color: #F25381;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+}
+
+.number_circle {
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  background-color: #000;
+  border: 0.15vw solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw; /* 💡 카드 크기에 비례한 글자 크기 */
+  color: #fff;
+  margin-bottom: 1.5vh;
+  font-weight: 350;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.news_head {
+  font-size: 1.5vw; /* 💡 화면 너비에 따라 줄어드는 글자 */
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.news_title {
+  font-size: 0.7vw;
+  color: #949494;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 1vh;
+  display: inline-block;
+  width: 17vw; /* 💡 카드 크기에 맞춰 반응형 */
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.news_contents {
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 2vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+
+
+.circle_blur {
+  width: 50vw;                /* 900px / 1920 ≒ 47vw */
+  height: 50vw;               /* 정사각형 유지 */
+  background-color: rgb(123, 196, 255);
+  filter: blur(8.3vw);        /* 160px / 1920 ≒ 8.3vw */
+  position: absolute;
+  z-index: 1;
+  top: -30vh;                /* 80px / 1080 ≒ 4.2vh */
+  right: -2.1vw;              /* 40px / 1920 ≒ 2.1vw */
+}
+
+
+
+.circle {
+  background-color: #000000;
+  width: 78vw;               /* 약 1500px 기준으로 1920px 화면 대비 비율 */
+  height: 78vw;              /* 정사각형 원 → width와 같게 유지 */
+  border-radius: 50%;
+  border: 0.05vw solid #ffffff;  /* 선도 반응형으로 조정 */
+  position: absolute;
+  z-index: 2;
+  right: -36vw;              /* 700px → 36vw (1920 기준) */
+  top: -40vh;                /* 200px → 10vh (1080 기준) */
+}
+
+/* 영구동토층 들어보신 적 있나요? 부분 애니메이션  */
+/* 모든 대상 초기 상태 */
+.section3_section_name,
+.section3_title,
+.section3_text,
+.circle_blur {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 왼쪽 슬라이드 효과용 초기 설정 */
+.section3_title,
+.section3_text {
+  transform: translateX(-30px);
+}
+
+/* circle_blur은 아래+오른쪽에서 슬라이드 */
+.circle_blur {
+  transform: translate(40px, 40px);
+}
+
+/* 등장 순서별 visible 상태 정의 */
+.section3_wrapper.visible .section3_section_name {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.section3_wrapper.visible .section3_title {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.section3_wrapper.visible .section3_text {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.4s;
+}
+
+.section3_wrapper.visible .circle_blur {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition-delay: 0.5s;
+}
+
+/* 카드 3개 애니메이션 */
+
+/* 공통 초기 상태 */
+.section3_title_right,
+.card {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* 오른쪽에서 등장 (title_right) */
+.section3_title_right {
+  transform: translateX(30px);
+}
+
+/* 아래에서 등장 (cards) */
+.card {
+  transform: translateY(30px);
+}
+
+/* 등장 애니메이션 클래스 */
+.section3_title_right.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card.delay-1 {
+  transition-delay: 0.3s;
+}
+.card.delay-2 {
+  transition-delay: 0.4s;
+}
+.card.delay-3 {
+  transition-delay: 0.5s;
+}
+
+
+
+.section4_wrapper {
+      background-color: #000000;
+    flex-direction: column;
+    display: flex;
+    padding: 5vh 5vw;
+    min-height: 100vh;
+  overflow: hidden;
+  align-items: center;
+}
+
+.section4_textwrapper {
+  padding-top: 35%;
+}
+
+.section4_kinds {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.2vw;
+  color: #fff;
+  text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 0.8vh;
+}
+
+.section4_subtitle {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 1vh;
+}
+
+.section4_title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 2vh;
+  font-weight: 600;
+ 
+}
+
+.section4_video {
+  width: 75vw; /* 전체 화면 너비의 80% */
+  height: 38vw;
+  background-color: #9a9a9a;
+  overflow: hidden; 
+  border-radius: 3vw;
+  margin-top: 1vh;
+  align-items: center;
+  
+}
+
+.section4_video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  
+}
+
+.section4_elements_wrapper {
+  align-items: center;
+  margin-top: 5vh;
+
+}
+
+.section4_elements_1 {
+    display: grid;
+    grid-template-columns: repeat(3, 15vw);
+    gap: 1vw;
+    justify-content: center;
+    margin-top: 8vh;
+    align-items: center;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.section4_icon {
+  width: 7vw;
+  height: 6vh;
+  border: 0.1vw solid #fff;
+  border-radius: 3vw;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.1vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0 );
+    display: flex;                /* ⭐ 수직/수평 정렬을 위한 flex */
+  align-items: center;          /* 수직 가운데 정렬 */
+  justify-content: center;      /* 수평 가운데 정렬 */
+   margin: 0 auto;  
+   margin-top: 2vh;
+   margin-bottom: 1vh;
+}
+
+.section4_elements_text {
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.1vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0 );
+  display: flex;                /* ⭐ 수직/수평 정렬을 위한 flex */
+  align-items: center;          /* 수직 가운데 정렬 */
+  justify-content: flex-start;     /* 수평 가운데 정렬 */
+  margin: 0 auto;  
+  flex-direction: column;
+  height: 100%;
+
+}
+
+.section5_wrapper {
+    background-color: #000000;
+    flex-direction: column;
+    display: flex;
+    padding: 5vh 6.5vw;
+    min-height: 100vh;
+    align-items:left;
+    position: relative;
+  }
+
+  .section5_textwrapper {
+    align-items:left;
+  margin-top: 5vh;
+  padding: 2vw 2vh;
+  
+  }
+
+  .section5_icon {
+  width: 10.5vw;
+  height: 6vh;
+  border: 0.1vw solid #fff;
+  border-radius: 3vw;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0 );
+  display: flex;                /* ⭐ 수직/수평 정렬을 위한 flex */
+  align-items: center;          /* 수직 가운데 정렬 */
+  justify-content: center;      /* 수평 가운데 정렬 */
+  
+   margin-top: 2vh;
+   
+  }
+
+  .section5_title {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: left;
+  padding-top: 4vh;
+  padding-bottom: 3vh;
+  }
+
+  .section5_text {
+      font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: left;
+  font-weight: 300;
+    white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  }
+
+  .section5_ai_drone {
+  z-index: 3;
+  background: url('IMG/AI_front_png.png');
+  width: 20vw;
+  height: 40vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: auto;     /* 오른쪽 정렬 */
+  margin-right: 4vw;     /* 오른쪽에서 살짝 안쪽으로 */
+  margin-top: -15vh;      /* 위로 살짝 올리기 (음수로) */
+  z-index:5;
+}
+
+.circle_blur_drone {
+  width: 20vw;                /* 900px / 1920 ≒ 47vw */
+  height: 20vw;               /* 정사각형 유지 */
+  background-color: #8bbcff;
+  filter: blur(8.3vw);        /* 160px / 1920 ≒ 8.3vw */
+  position: absolute;
+  z-index: 1;
+    top: 43vh;
+    right: 9vw;
+}
+
+/* 세르마 소개 애니메이션 */
+
+/* 🔹 모든 대상의 초기 상태 */
+.section5_icon,
+.section5_title,
+.section5_text,
+.section5_ai_drone,
+.circle_blur_drone {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* 🔹 슬라이드 효과 초기 설정 */
+.section5_title,
+.section5_text {
+  transform: translateX(-30px); /* 왼쪽에서 */
+}
+
+/* 🔹 등장 시 클래스 (순서대로) */
+.section5_icon.visible {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.section5_title.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+.section5_text.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.section5_ai_drone.visible {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.circle_blur_drone.visible {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+
+.section5_text_wrapper {
+  align-items: left;
+  padding-top: 20vh;
+  padding-bottom: 3vh;
+}
+
+.section5_icon_right {
+  width: 6vw;
+  height: 6vh;
+  border: 0.1vw solid #fff;
+  border-radius: 3vw;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0 );
+    display: flex;                /* ⭐ 수직/수평 정렬을 위한 flex */
+  align-items: center;          /* 수직 가운데 정렬 */
+  justify-content: center;      /* 수평 가운데 정렬 */
+  
+   margin-top: 5vh;
+   margin-bottom: 1vh;
+   position: relative;
+    margin-left: auto;
+}
+
+
+
+ .section5_title_right {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: right;
+  padding-top: 3vh;
+  padding-bottom: 1vh;
+  z-index: 3;
+  
+}
+
+.section5_cards {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 37px;
+    padding: 2vh 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 3;
+  position: relative;
+}
+
+.section5_card {
+  width: 22vw;
+  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1.5vw 2vh;
+  border-radius: 1.5vw;
+  border: 2px solid #fff;
+  color: #F25381;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.dystopia-image {
+  background-image: url('IMG/background_dystopia.png');
+        background-size: cover;    
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.sunset-image {
+  background-image: url('IMG/background_river3.png');
+          background-size: cover;    
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section5_number_circle {
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  background-color: #000;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw; /* 💡 카드 크기에 비례한 글자 크기 */
+  color: #fff;
+  margin-bottom: 1vh;
+  font-weight: 350;
+}
+
+
+.image-placeholder {
+    background-color: #cfcfcf;
+    height: 25vh;
+    border-radius: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 20vw;
+}
+
+.lake-image {
+  background-image: url('IMG/background_river.png');
+      background-size: cover;  
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.section5_news_head {
+  font-size: 1.5vw; /* 💡 화면 너비에 따라 줄어드는 글자 */
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.section5_news_title {
+  font-size: 0.7vw;
+  color: #949494;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 1vh;
+  display: inline-block;
+  width: 17vw; /* 💡 카드 크기에 맞춰 반응형 */
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.section5_news_contents {
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 0.3vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 카드 3개 등장(공간 소개) */
+
+/* 모든 대상 기본 상태 */
+.section5_icon_right,
+.section5_title_right,
+.section5_card {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* 위치 이동 초기값 설정 */
+.section5_title_right {
+  transform: translateX(30px); /* 오른쪽에서 슬라이드 */
+}
+.section5_card {
+  transform: translateY(30px); /* 아래에서 슬라이드 */
+}
+
+/* 등장 시 visible 상태 */
+.section5_icon_right.visible {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.section5_title_right.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+.section5_card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section5_card.delay-1 {
+  transition-delay: 0.3s;
+}
+.section5_card.delay-2 {
+  transition-delay: 0.4s;
+}
+.section5_card.delay-3 {
+  transition-delay: 0.5s;
+}
+
+
+.section6_wrapper {
+    background-color: #000000;
+   
+    padding: 40vh 5vw;
+    min-height: 80vh;
+    
+    align-items: center;
+}
+
+
+
+.section6_texts {
+  align-items: center;
+  position: relative;
+  
+}
+
+.section6_title {
+  font-family: "Trispace", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 2vh;
+  position: relative;
+  z-index: 3;
+  font-weight: 500;
+}
+
+.circle_blur_section6 {
+    width: 40vw;
+    height: 20vw;
+    background-color: rgb(123, 196, 255, 0.5);
+    filter: blur(8.3vw);
+    position: absolute;
+    z-index: 1;
+    top: -5vh;
+    left: 25vw;
+}
+
+.circle_blur_2_section6 {
+    width: 15vw;
+    height: 10vw;
+    background-color: rgb(255, 241, 160);
+    filter: blur(8.3vw);
+    position: absolute;
+    z-index: 1;
+    
+    left: 38vw;
+}
+
+
+.section6_news_contents {
+  font-size: 1.2vw;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 1.5vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.8;
+  position: relative;
+   z-index: 3;
+}
+
+/* visual 도입부 애니메이션 */
+
+/* 초기 상태: 숨김 */
+.section6_title,
+.section6_news_contents,
+.circle_blur_section6,
+.circle_blur_2_section6 {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* 등장 애니메이션 (순차적으로 delay 적용) */
+.section6_wrapper.visible .section6_title {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.section6_wrapper.visible .section6_news_contents {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.section6_wrapper.visible .circle_blur_section6 {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+.section6_wrapper.visible .circle_blur_2_section6 {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+
+
+
+  .section6_icon {
+  width: 10.5vw;
+  height: 6vh;
+  border: 0.1vw solid #fff;
+  border-radius: 3vw;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 0.9vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0 );
+  display: flex;                /* ⭐ 수직/수평 정렬을 위한 flex */
+  align-items: center;          /* 수직 가운데 정렬 */
+  justify-content: center;      /* 수평 가운데 정렬 */
+  
+   margin-top: 2vh;
+   
+  }
+
+  
+.section6_title_left {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: left;
+  padding-bottom: 1.5vw;
+  padding-top: 3vh;
+  padding-left: 0.9vw;
+}
+
+.section6_subtitle_left {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: left;
+  padding-bottom: 0.5vh;
+  padding-left: 0.9vw;
+}
+
+.section6_text_left {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: left;
+  font-weight: 300;
+    white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-top: 2vh;
+  padding-left: 1vw;
+}
+
+.section6_texts_left{
+  align-items: center;
+  padding:1vw 5vw;
+ 
+}
+
+  .section6_icon_left {
+  width: 7vw;
+  height: 6vh;
+  border: 0.1vw solid #fff;
+  border-radius: 3vw;
+  color: #fff;
+  
+  font-size: 0.9vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0 );
+  display: flex;                /* ⭐ 수직/수평 정렬을 위한 flex */
+  align-items: center;          /* 수직 가운데 정렬 */
+  justify-content: center;      /* 수평 가운데 정렬 */
+  font-family: "Trispace", sans-serif;
+   margin-top: 2vh;
+   
+  }
+
+  .gray-box-container {
+  display: flex;
+  justify-content: left;  
+  gap: 1vw;              
+}
+
+.gray-box {
+  width: 20vw;
+  height: 20vw;
+  background-size: cover;    
+  background-position: center; 
+  background-repeat: no-repeat;
+  border-radius: 8px;        
+  /* overflow: hidden; */
+}
+
+
+.img1 {
+  background-image: url('IMG/AI_front.png');
+    background-size: 67%;    
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img2 {
+  background-image: url('IMG/AI_left.png');
+      background-size: 50%;     
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img3 {
+  background-image: url('IMG/AI_right.png');
+      background-size: 60%;    
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img4 {
+  background-image: url('IMG/AI_back.png');
+      background-size: 63%;    
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* AI 오브젝트 소개 */
+
+/* 초기 상태 공통 */
+.section6_icon_left,
+.section6_text_left,
+.section6_title_left,
+.section6_subtitle_left,
+.gray-box {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 왼쪽에서 슬라이드 */
+.section6_title_left,
+.section6_subtitle_left {
+  transform: translateX(-20px); /* 부드럽게 줄임 */
+}
+
+/* 등장 시 */
+.section6_texts_left.visible .section6_icon_left {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.section6_texts_left.visible .section6_text_left {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.section6_texts_left.visible .section6_title_left,
+.section6_texts_left.visible .section6_subtitle_left {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+/* gray-box 이미지 등장 (각각 순차) */
+.section6_texts_left.visible .img1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+.section6_texts_left.visible .img2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.45s;
+}
+.section6_texts_left.visible .img3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+.section6_texts_left.visible .img4 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.55s;
+}
+
+/* 추가: img들 약간 아래에서 올라오게 */
+.gray-box {
+  transform: translateY(20px);
+}
+
+
+.section6_texts_right{
+  align-items: right;
+  padding: 5vw 5vw;
+  
+}
+
+
+.section6_viruswrapper {
+  padding: 5vw 0;
+  flex-direction: column;
+  display: flex;
+  
+}
+
+.section6_title_virus {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: right;
+  padding-bottom: 1.5vw;
+  padding-top: 3vh;
+  padding-left: 0.9vw;
+}
+
+.section6_subtitle_virus {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: right;
+  padding-bottom: 0.5vh;
+  padding-left: 0.9vw;
+}
+
+.slider-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+  align-items: right;
+  white-space: nowrap;
+  max-width: 1280px; 
+     margin-left: auto;
+    margin-right: 0;
+    
+}
+
+
+.gray-box-container-virus {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1vw;
+  width: max-content;    
+}
+
+.gray-box-virus {
+  flex: 0 0 auto;
+  width: 20vw;
+  height: 20vw;
+  background-color: #cccccc00;
+  overflow: hidden;
+}
+
+
+.virus1 {
+  background-image: url('IMG/Virus_gray.png');
+  background-size: 12vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.virus2 {
+  background-image: url('IMG/Virus_green.png');
+  background-size: 12vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.virus3 {
+  background-image: url('IMG/Tanger.png');
+  background-size: 45vw;
+  background-position: 55% center;
+  background-repeat: no-repeat;
+  transform: rotate(60deg);
+  
+}
+
+.virus4 {
+  background-image: url('IMG/Metan.png');
+  background-size: 55vw;
+  background-position: 48% center;
+  background-repeat: no-repeat;
+}
+
+.virus5 {
+  background-image: url('IMG/Virus_3.png');
+  background-size: 60vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.virus6 {
+  background-image: url('IMG/Virus_4.png');
+  background-size: 20vw;
+  background-position: 55% center;
+  background-repeat: no-repeat;
+}
+
+.virus7 {
+  background-image: url('IMG/Virus_5.png');
+  background-size: 40vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.slider-wrapper::-webkit-scrollbar {
+  height: 1.5vh;  
+  width: 3vw;           
+}
+
+
+.slider-wrapper::-webkit-scrollbar-track {
+  background: black;          
+}
+
+
+.slider-wrapper::-webkit-scrollbar-thumb {
+  background: #aaa;        
+  border-radius: 5px;       
+}
+
+.slider-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+/* 유해물질 오브젝트 소개 */
+
+/* 초기 상태 숨김 */
+.section6_title_virus,
+.section6_subtitle_virus,
+.slider-wrapper {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 오른쪽에서 살짝 밀려있는 상태 */
+.section6_title_virus,
+.section6_subtitle_virus {
+  transform: translateX(30px);
+}
+
+/* 등장 애니메이션 */
+.section6_texts_right.visible .section6_title_virus,
+.section6_texts_right.visible .section6_subtitle_virus {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.1s;
+}
+
+.section6_texts_right.visible .slider-wrapper {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+
+.section6_title_left2 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: left;
+  padding-bottom: 1.5vw;
+  padding-top: 3vh;
+  padding-left: 0.9vw;
+}
+
+.section6_subtitle_left2 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: left;
+  padding-bottom: 0.5vh;
+  padding-left: 0.9vw;
+}
+
+.section6_text_left2 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: left;
+  font-weight: 300;
+    white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-top: 2vh;
+  padding-left: 1vw;
+}
+
+.section6_texts_left2{
+  align-items: center;
+  padding: 5vw 5vw;
+ 
+}
+
+.gray-box-container-river {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1vw;
+  width: max-content;   
+  padding-left: 1vw;
+  padding-top: 3vh;
+}
+
+.gray-box-river {
+  flex: 0 0 auto;
+  width: 20vw;
+  height: 17vw;
+  background-color: #cccccc00;
+  overflow: hidden;
+   border-radius: 5%;
+}
+
+.river1 {
+  background-image: url('IMG/river1_Re.png');
+  background-size: 25vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.river2 {
+  background-image: url('IMG/river2_last2.png');
+  background-size: 25vw;
+  background-position: 40% center;
+  background-repeat: no-repeat;
+}
+
+.river3 {
+  background-image: url('IMG/permafrost_re.png');
+  background-size: 25vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.river4 {
+  background-image: url('IMG/bubble_2.png');
+  background-size: 25vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 호수 위 오브젝트 애니메이션 */
+
+/* 초기 상태 */
+.section6_title_left2,
+.section6_subtitle_left2,
+.gray-box-river {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 텍스트는 왼쪽에서 살짝 이동 */
+.section6_title_left2,
+.section6_subtitle_left2 {
+  transform: translateX(-20px);
+}
+
+/* 등장 시 */
+.section6_texts_left2.visible .section6_title_left2,
+.section6_texts_left2.visible .section6_subtitle_left2 {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.1s;
+}
+
+/* 이미지 박스 순차 등장 */
+.section6_texts_left2.visible .river1 {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.section6_texts_left2.visible .river2 {
+  opacity: 1;
+  transition-delay: 0.35s;
+}
+.section6_texts_left2.visible .river3 {
+  opacity: 1;
+  transition-delay: 0.4s;
+}
+.section6_texts_left2.visible .river4 {
+  opacity: 1;
+  transition-delay: 0.45s;
+}
+
+/* 약간 아래에서 부드럽게 올라오는 효과 추가 */
+.gray-box-river {
+  transform: translateY(20px);
+}
+.section6_texts_left2.visible .gray-box-river {
+  transform: translateY(0);
+}
+
+
+.section6_texts_right{
+  align-items: right;
+  padding: 5vw 6.5vw;
+  
+}
+
+.section6_texts_right_dystopia{
+  align-items: right;
+  padding: 5vw 6.5vw;
+  
+}
+
+
+
+.slider-wrapper-dystopia {
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+  align-items: right;
+  white-space: nowrap;
+  max-width: 1280px; 
+     margin-left: auto;
+    margin-right: 0;
+}
+
+.slider-wrapper-dystopia::-webkit-scrollbar {
+  height: 1.5vh;
+}
+
+.slider-wrapper-dystopia::-webkit-scrollbar-track {
+  background: black;
+}
+
+.slider-wrapper-dystopia::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 2vw;
+}
+
+.slider-wrapper-dystopia::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.section6_dystopiawrapper {
+  padding: 5vw 0;
+  flex-direction: column;
+  display: flex;
+  
+}
+
+
+
+.section6_title_dystopia {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: right;
+  padding-bottom: 1.5vw;
+  padding-top: 3vh;
+  padding-left: 0.9vw;
+}
+
+.section6_subtitle_dystopia {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: right;
+  padding-bottom: 0.5vh;
+  padding-left: 0.9vw;
+}
+
+.gray-box-container-dystopia {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1vw;
+  width: max-content;   
+  padding-left: 1vw;
+  padding-top: 3vh;
+}
+
+.gray-box-dystopia {
+  flex: 0 0 auto;
+  width: 20vw;
+  height: 17vw;
+  background-color: #cccccc00;
+  overflow: hidden;
+   border-radius: 5%;
+ 
+}
+
+.dystopia1 {
+  background-image: url('IMG/Building_1_rerere.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia2 {
+  background-image: url('IMG/Building_2.png');
+  background-size: 20vw;
+  background-position: 40% center;
+  background-repeat: no-repeat;
+  filter: brightness(0.9);
+}
+
+.dystopia3 {
+  background-image: url('IMG/Building_3.png');
+  background-size:20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.7);
+}
+
+.dystopia4 {
+  background-image: url('IMG/Building_4.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia5 {
+  background-image: url('IMG/Building_5.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia6 {
+  background-image: url('IMG/Building_6.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia7 {
+  background-image: url('IMG/Building_7.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia8 {
+  background-image: url('IMG/Building_8.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia9 {
+  background-image: url('IMG/Building_9.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia10 {
+  background-image: url('IMG/Building_10.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia11 {
+  background-image: url('IMG/Building_11.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia12 {
+  background-image: url('IMG/Building_12.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia13 {
+  background-image: url('IMG/Building_13.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia14 {
+  background-image: url('IMG/Building_14.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dystopia15 {
+  background-image: url('IMG/Building_15.png');
+  background-size: 20vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 디스토피아 내 오브젝트 애니메이션 */
+
+/* 초기 상태 설정 */
+.section6_title_dystopia,
+.section6_subtitle_dystopia,
+.slider-wrapper-dystopia {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 오른쪽에서 약간 밀려난 상태 */
+.section6_title_dystopia,
+.section6_subtitle_dystopia {
+  transform: translateX(30px);
+}
+
+/* 등장 시 visible 클래스 붙었을 때 */
+.section6_texts_right_dystopia.visible .section6_title_dystopia,
+.section6_texts_right_dystopia.visible .section6_subtitle_dystopia {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.1s;
+}
+
+.section6_texts_right_dystopia.visible .slider-wrapper-dystopia {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+
+.section7_conceptboard_wrapper {
+    background-color: #000000;
+    flex-direction: column;
+    display: flex;
+    
+  }
+
+.section7_conceptboard_icon {
+  width: 10.5vw;
+  height: 6vh;
+  border: 0.1vw solid #fff;
+  border-radius: 3vw;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.1vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0 );
+    display: flex;                /* ⭐ 수직/수평 정렬을 위한 flex */
+  align-items: center;          /* 수직 가운데 정렬 */
+  justify-content: center;      /* 수평 가운데 정렬 */
+   margin-right: auto;  
+   margin-top: 2vh;
+   margin-bottom: 4vh;
+}
+
+.section7_conceptboard_text {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1vw;
+  color: #fff;
+  text-align: left;
+  font-weight: 350;
+    white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin-top: 2vh;
+  padding-left: 1vw;
+}
+
+.gray-box-ConceptBoard {
+    height: 100vh;
+    background-image: url('IMG/Board_last.png');
+    background-size: 85vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-left: 1vw;
+    margin-top: 2vh;
+  }
+
+  .section7_texts_left{
+  align-items: left;
+  padding: 5vw 5vw;
+ 
+}
+
+/* 디자인 보드 애니메이션 */
+
+/* 초기 상태 (opacity 0, transform 이동) */
+.section7_conceptboard_icon,
+.section7_conceptboard_text,
+.gray-box-ConceptBoard {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 아이콘은 위치 이동 없이 opacity만 */
+.section7_conceptboard_icon {
+  transform: none;
+}
+
+/* 텍스트는 왼쪽에서 등장 */
+.section7_conceptboard_text {
+  transform: translateX(-30px);
+}
+
+/* 이미지 박스는 아래에서 등장 */
+.gray-box-ConceptBoard {
+  transform: translateY(30px);
+}
+
+/* 등장 시 visible 클래스가 붙었을 때 */
+.section7_conceptboard_wrapper.visible .section7_conceptboard_icon {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.section7_conceptboard_wrapper.visible .section7_conceptboard_text {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+.section7_conceptboard_wrapper.visible .gray-box-ConceptBoard {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+
+.section8_wrapper {
+    background-color: #000000;
+   
+    padding: 40vh 5vw;
+    min-height: 100vh;
+    overflow: hidden;
+    align-items: center;
+}
+
+
+.section8_texts {
+  align-items: center;
+  position: relative;
+  
+}
+
+.section8_title {
+  font-family: "Trispace", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 2vh;
+  
+}
+
+.section8_news_contents {
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 350;
+  text-align: center;
+  margin-top: 1.5vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.8;
+}
+
+/* 카메라 사진 등장 */
+
+/* 초기 상태: 투명 + 위치 이동 */
+.section8_title,
+.section8_news_contents,
+.box_wrapper {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 위치 이동 */
+.section8_news_contents {
+  transform: translateY(10px); /* 약간 아래에서 올라오게 */
+}
+.box_wrapper {
+  transform: translateY(30px); /* 더 아래에서 올라오게 */
+}
+
+/* 등장 시 visible 클래스 추가될 때 */
+.section8_wrapper.visible .section8_title {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.section8_wrapper.visible .section8_news_contents {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.section8_wrapper.visible .box_wrapper {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+
+.box_wrapper {
+display: flex;
+
+    justify-content: center;
+}
+
+.small-image {
+  width: 55vw;
+  height: auto;
+}
+
+.section9_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 5vh 5vw;
+  background-color: #000000;
+}
+
+.section9_wrapper2{
+  padding: 0 2vw;
+}
+
+.section9_conceptboard_icon {
+  width: 10vw;
+  height: 6vh;
+  border: 0.1vw solid #fff;
+  border-radius: 3vw;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.1vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0 );
+    display: flex;                /* ⭐ 수직/수평 정렬을 위한 flex */
+  align-items: center;          /* 수직 가운데 정렬 */
+  justify-content: center;      /* 수평 가운데 정렬 */
+   margin-right: auto;  
+   margin-top: 2vh;
+   margin-bottom: 4vh;
+}
+
+.section9_contents_num {
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 1.5vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.8;
+}
+
+.section9_contents {
+  font-size: 1.5vw;
+  color: #fff;
+  font-weight: 450;
+  text-align: left;
+  margin-top: 1.5vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.8;
+}
+
+
+
+.section9_picandtext{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+/* 인터렉션 1 애니메이션 */
+
+/* 초기 상태: 투명 + 살짝 왼쪽 */
+.section9_conceptboard_icon,
+.section9_contents_num,
+.section9_contents,
+.interaction-image,
+.section9_contents_2 {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 등장 시 visible 클래스가 붙을 때 */
+.section9_wrapper.visible .section9_conceptboard_icon {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.1s;
+}
+
+.section9_wrapper.visible .section9_contents_num,
+.section9_wrapper.visible .section9_contents {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+.section9_wrapper.visible .interaction-image {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.section9_wrapper.visible .section9_contents_2 {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.4s;
+}
+
+
+.section9_contents_2 {
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 450;
+  text-align: left;
+  
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.8;
+}
+
+.interaction-image {
+  width: 38vw;
+  height: 53vh;
+  background-size: cover;
+  border-radius: 1vw;
+  margin-top: 3vh;
+}
+
+.section9_wrapper_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  padding: 5vh 5vw;
+  background-color: #000000;
+}
+
+.section9_wrapper2_right{
+  padding: 0 2vw;
+}
+
+.section9_conceptboard_icon_right {
+  width: 10vw;
+  height: 6vh;
+  border: 0.1vw solid #fff;
+  border-radius: 3vw;
+  color: #fff;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.1vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0 );
+    display: flex;                /* ⭐ 수직/수평 정렬을 위한 flex */
+  align-items: center;          /* 수직 가운데 정렬 */
+  justify-content: center;      /* 수평 가운데 정렬 */
+   margin-left: auto;  
+   margin-top: 2vh;
+   margin-bottom: 4vh;
+}
+
+.section9_contents_num_right {
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 400;
+  text-align: right;
+  margin-top: 1.5vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.8;
+}
+
+.section9_contents_right {
+  font-size: 1.5vw;
+  color: #fff;
+  font-weight: 450;
+  text-align: right;
+  margin-top: 1.5vh;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.8;
+}
+
+
+
+.section9_picandtext_right{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+      justify-items: end;
+}
+
+.section9_contents_2_right {
+  font-size: 1vw;
+  color: #fff;
+  font-weight: 450;
+  text-align: right;
+  
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.8;
+}
+
+.interaction-image_right {
+  width: 38vw;
+  height: 53vh;
+  background-size: cover;
+  border-radius: 1vw;
+  margin-top: 3vh;
+}
+
+/* 인터렉션 2 애니메이션 */
+
+/* 공통 초기 상태 */
+.section9_contents_num_right,
+.section9_contents_right,
+.section9_contents_2_right,
+.section9_wrapper_right .interaction-image {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* visible 클래스 추가 시 애니메이션 시작 */
+.section9_wrapper_right.visible .section9_contents_num_right,
+.section9_wrapper_right.visible .section9_contents_right {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+.section9_wrapper_right.visible .interaction-image {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.section9_wrapper_right.visible .section9_contents_2_right {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.4s;
+}
+
+
+.section10_title {
+  font-family: "Trispace", sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 2vh;
+  
+}
+
+.section10_wrapper {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20vh 5vw;
+  background-color: #000000;
+  margin-top: 10vh;
+}
+
+.youtube-video {
+  display: flex;
+  justify-content: center;
+}
+
+/* 유튜브 애니메이션 */
+
+/* 초기 상태 */
+.section10_title,
+.youtube-video {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 등장 후 상태 */
+.section10_wrapper.visible .section10_title {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.section10_wrapper.visible .youtube-video {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+
+.custom-footer {
+  background-color: #1c1c1c;       
+  color: white;
+  display: flex;                
+  justify-content: space-around; 
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  flex-wrap: wrap;               
+  margin-top: 200px;
+
+  line-height: 1.6;
+}
+
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-right img {
+  width: 40px;     
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.scroll-nav {
+  position: fixed;
+  right: 40px;
+  top: 80%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0.8px;
+  background-color: white;
+  z-index: -1;
+}
+
+
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  font-family: "Trispace", sans-serif;
+}
+
+.nav-dot.active {
+  width: 18px;
+  height: 18px;
+}
+
+
+.nav-dot span {
+  position: absolute;
+  right: 120%; 
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  color: white;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 1000;
+  pointer-events: none;
+  margin-right: 10px;
+  font-weight: 250;
+
+}
+
+
+.nav-dot.active span {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+
+.nav-dot:hover {
+  background-color: #aaa;
+}
+
+.nav-dot:hover span {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  color: #aaa;
+}
+
+.cursor-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  background: rgba(150, 215, 255, 0.7); /* 밝은 블러 효과 */
+  pointer-events: none; /* 마우스 클릭 방해 안 받도록 */
+  filter: blur(2vw);
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+   transition: opacity 0.2s ease;
+}
